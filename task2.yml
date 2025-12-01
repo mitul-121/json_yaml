@@ -1,0 +1,8 @@
+student:
+  name: Mitul
+  age: 25
+  grade: Junior
+  subjects:
+    - Mathematics
+    - Physics
+    - Chemistry
