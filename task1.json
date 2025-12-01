@@ -1,0 +1,12 @@
+{
+    "student": {
+        "name": "Mitul",
+        "age": 25,
+        "grade": "Junior",
+        "subjects": [
+            "Linux",
+            "Bash scripting",
+            "Python"
+        ]
+    }
+}
