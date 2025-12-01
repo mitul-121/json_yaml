@@ -1,0 +1,6 @@
+{
+    "program": {
+        "language": "C#",
+        "code": "// BEGIN:\nusing System;\nusing System.IO;\nusing Newtonsoft.Json;\nusing Newtonsoft.Json.Linq;\n\nclass Program\n{\n    static void Main(string[] args)\n    {\n        // Read JSON data from a file\n        var json = File.ReadAllText(\"data.json\");\n        var data = JObject.Parse(json);\n\n        // Manipulate the data\n        // Example: Change a value, add a new field, delete a field\n        if (data.ContainsKey(\"field_to_change\"))\n        {\n            data[\"field_to_change\"] = \"new_value\";\n        }\n\n        data[\"new_field\"] = \"new_value\";\n\n        if (data.ContainsKey(\"field_to_delete\"))\n        {\n            data.Remove(\"field_to_delete\");\n        }\n\n        // Write the manipulated data back to the file\n        File.WriteAllText(\"data.json\", data.ToString(Formatting.Indented));\n    }\n}\n// END:"
+    }
+}
